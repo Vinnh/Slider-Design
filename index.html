@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon">
+    <title>cats</title>
+</head>
+<body>
+    <div class="main">
+        <div class="slides">
+            <input type="radio" name="slide" id="slide1" checked> 
+            <input type="radio" name="slide" id="slide2"> 
+            <input type="radio" name="slide" id="slide3"> 
+            <input type="radio" name="slide" id="slide4"> 
+            <input type="radio" name="slide" id="slide5"> 
+
+            <div class="slide s1">
+                <img src="imagens/1.jpg">
+            </div>
+            <div class="slide">
+                <img src="imagens/2.jpg">
+            </div>
+            <div class="slide">
+                <img src="imagens/3.jpg">
+            </div>
+            <div class="slide">
+                <img src="imagens/4.jpg">
+            </div>
+            <div class="slide">
+                <img src="imagens/5.jpg">
+            </div>
+
+        </div>
+
+        <div class="autonav">
+            <div class="btn1"></div>
+            <div class="btn2"></div>
+            <div class="btn3"></div>
+            <div class="btn4"></div>
+            <div class="btn5"></div>
+        </div>
+
+        <div class="navigation">
+            <label class="bar" for="slide1"></label>
+            <label class="bar" for="slide2"></label>
+            <label class="bar" for="slide3"></label>
+            <label class="bar" for="slide4"></label>
+            <label class="bar" for="slide5"></label>
+        </div>
+
+    </div>
+
+    <script type="text/javascript">
+        var counter = 1;
+        setInterval(function(){
+            document.getElementById('slide' + counter).checked = true;
+            counter++;
+            if(counter > 5){
+                counter = 1;
+            }
+        }, 3000);
+    </script>
+    
+</body>
+</html>
